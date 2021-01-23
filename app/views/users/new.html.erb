@@ -1,5 +1,21 @@
-<h1>Here. We. Go.</h1>
+<%= form_tag('/users') do -%>
 
+  <%= label_tag 'email' %>
+  <%= email_field_tag 'email' %>
+  <br><br>
+  <%= label_tag 'username' %>
+  <%= text_field_tag 'username' %>
+  <br><br>
+  <%= label_tag 'password' %>
+  <%= password_field_tag 'password' %>
+  <br><br>
+  <%= submit_tag 'Submit' %>
+
+<% end -%>
+
+
+<%# Commenting this raw erb code %>
+<% if false %>
 <form action="/users" method="post" accept-charset="UTF-8">
 
   <input type="hidden" name="authenticity_token" value="<% form_authenticity_token %>">
@@ -16,3 +32,5 @@
   <input type="submit" value="Submit">
 
 </form>
+<% end %>
+
